@@ -7,7 +7,7 @@ ExampleExtension.prototype.getInfo = function () {
     return {
         // Required: the machine-readable name of this extension.
         // Will be used as the extension's namespace. Must not contain a '.' character.
-        id: 'someBlocks',
+        id: 'TiGrain974',
         // Optional: the human-readable name of this extension as string.
         // This and any other string to be displayed in the Scratch UI may either be
         // a string or a call to `intlDefineMessage`; a plain string will not be
@@ -18,12 +18,11 @@ ExampleExtension.prototype.getInfo = function () {
         // internally namespace the messages such that two extensions could have
         // messages with the same ID without colliding.
         // See also: https://github.com/yahoo/react-intl/wiki/API#definemessages
-        name: 'Some Blocks',
+        name: 'TiGrain974',
         // Optional: URI for an icon for this extension. Data URI OK.
         // If not present, use a generic icon.
         // TODO: what file types are OK? All web images? Just PNG?
-        iconURI: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAAAAACyOJm3AAAAFklEQVQYV2P4DwMMEMgAI/+DE' +
-            'UIMBgAEWB7i7uidhAAAAABJRU5ErkJggg==',
+        iconURI: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAAAAACyOJm3AAAAFklEQVQYV2P4DwMMEMgAI/+DEUIMBgAEWB7i7uidhAAAAABJRU5ErkJggg==',
         // Optional: Link to documentation content for this extension.
         // If not present, offer no link.
         docsURI: 'https://....',
@@ -31,11 +30,17 @@ ExampleExtension.prototype.getInfo = function () {
         // in the order intended for display.
         blocks: [
             {
-                opcode: 'example-noop',
+                opcode: 'addOneToCode',
                 blockType: Scratch.BlockType.COMMAND,
                 blockAllThreads: false,
-                text: 'do nothing',
-                func: 'noop'
+                text: 'Ajoute 1 graine à',
+                arguments: {
+                    BRANCH: {
+                        type: Scratch.ArgumentType.VARIABLE,
+                        defaultValue: 1
+                    }
+                },
+                func: 'addOneTo'
             },
             {
                 opcode: 'example-conditional',
