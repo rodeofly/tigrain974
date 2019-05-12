@@ -36,7 +36,7 @@ ExampleExtension.prototype.getInfo = function () {
                 text: 'Ajoute 1 graine à [BRANCH]',
                 arguments: {
                     BRANCH: {
-                        type: Scratch.ArgumentType.VARIABLE,
+                        type: "field_variable",
                     }
                 },
                 func: 'addOneTo'
