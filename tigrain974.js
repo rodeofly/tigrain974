@@ -30,10 +30,10 @@ ExampleExtension.prototype.getInfo = function () {
         // in the order intended for display.
         blocks: [
             {
-                opcode: 'addOneToCode [BRANCH]',
+                opcode: 'addOneToCode',
                 blockType: Scratch.BlockType.COMMAND,
                 blockAllThreads: false,
-                text: 'Ajoute 1 graine à',
+                text: 'Ajoute 1 graine à [BRANCH]',
                 arguments: {
                     BRANCH: {
                         type: Scratch.ArgumentType.VARIABLE,
